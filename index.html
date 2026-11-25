@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pocket Fridge AI – Privacy Policy, Terms & Account Deletion</title>
+  <style>
+    :root {
+      --primary: #0ea5e9;
+      --primary-dark: #0284c7;
+      --bg: #f8fafc;
+      --card: #ffffff;
+      --text: #1e293b;
+      --muted: #64748b;
+      --border: #e2e8f0;
+      --warn-bg: #fffbeb;
+      --warn-border: #fde68a;
+      --warn-text: #92400e;
+      --danger-bg: #fef2f2;
+      --danger-border: #fecaca;
+      --danger-text: #991b1b;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      padding: 24px 16px 64px;
+    }
+    .container {
+      max-width: 820px;
+      margin: 0 auto;
+    }
+    header {
+      background: linear-gradient(135deg, #0ea5e9, #2563eb);
+      color: #fff;
+      padding: 32px 28px;
+      border-radius: 24px;
+      margin-bottom: 24px;
+      box-shadow: 0 10px 25px -5px rgba(14, 165, 233, 0.25);
+    }
+    .header-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+    .brand {
+      font-size: 1.5rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+    .lang-switch {
+      display: flex;
+      gap: 8px;
+    }
+    .lang-btn {
+      background: rgba(255,255,255,0.2);
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.35);
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 0.85rem;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .lang-btn.active {
+      background: #fff;
+      color: #0284c7;
+    }
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 16px;
+    }
+    .nav-links a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 600;
+      background: rgba(255,255,255,0.16);
+      padding: 6px 12px;
+      border-radius: 10px;
+    }
+    .nav-links a:hover { background: rgba(255,255,255,0.28); }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 28px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
+    }
+    h2 {
+      font-size: 1.35rem;
+      font-weight: 800;
+      margin-bottom: 14px;
+      color: #0f172a;
+      border-bottom: 2px solid #f1f5f9;
+      padding-bottom: 8px;
+    }
+    h3 {
+      font-size: 1.02rem;
+      font-weight: 700;
+      margin: 18px 0 6px;
+      color: #0f172a;
+    }
+    p, li {
+      font-size: 0.94rem;
+      color: #334155;
+      margin-bottom: 10px;
+    }
+    ul, ol {
+      padding-left: 20px;
+      margin-bottom: 12px;
+    }
+    .box-warn {
+      background: var(--warn-bg);
+      border: 1px solid var(--warn-border);
+      color: var(--warn-text);
+      padding: 14px 16px;
+      border-radius: 14px;
+      margin: 14px 0;
+      font-size: 0.9rem;
+    }
+    .box-danger {
+      background: var(--danger-bg);
+      border: 1px solid var(--danger-border);
+      color: var(--danger-text);
+      padding: 16px;
+      border-radius: 14px;
+      margin: 14px 0;
+      font-size: 0.92rem;
+    }
+    .meta {
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.85);
+    }
+    .hidden { display: none; }
+    footer {
+      text-align: center;
+      font-size: 0.82rem;
+      color: var(--muted);
+      margin-top: 32px;
+    }
+    a.link { color: var(--primary-dark); font-weight: 600; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="header-top">
+        <div class="brand">Pocket Fridge AI</div>
+        <div class="lang-switch">
+          <button id="btn-en" class="lang-btn active" onclick="setLang('en')">🇺🇸 English</button>
+          <button id="btn-de" class="lang-btn" onclick="setLang('de')">🇩🇪 Deutsch</button>
+        </div>
+      </div>
+      <div class="meta" id="header-sub">Legal Information, Privacy Policy, Terms & Account Deletion • Last updated: November 2026</div>
+      <div class="nav-links" id="nav-en">
+        <a href="#privacy">Privacy Policy</a>
+        <a href="#delete-account">Account Deletion</a>
+        <a href="#terms">Terms & Health Disclaimer</a>
+      </div>
+      <div class="nav-links hidden" id="nav-de">
+        <a href="#privacy-de">Datenschutzerklärung</a>
+        <a href="#delete-account-de">Konto löschen</a>
+        <a href="#terms-de">AGB & Gesundheitshinweis</a>
+      </div>
+    </header>
+
+    <!-- ==================== ENGLISH VERSION ==================== -->
+    <div id="content-en">
+      <section class="card" id="privacy">
+        <h2>1. Privacy Policy (GDPR & Swiss FADP)</h2>
+        <p>This Privacy Policy explains how <strong>Pocket Fridge AI</strong> (Android Package: <code>com.pocketfridge.ai</code>) collects, uses, and protects your personal data when you use our mobile application.</p>
+
+        <h3>1.1 Data Controller / Contact</h3>
+        <p>
+          <strong>Operator:</strong> Mladen Jakovljevic<br>
+          <strong>Address:</strong> Lucerne, Switzerland<br>
+          <strong>Support & Privacy Email:</strong> <a class="link" href="mailto:pocketfridge.support@gmail.com">pocketfridge.support@gmail.com</a>
+        </p>
+
+        <h3>1.2 Data Stored Locally on Your Device</h3>
+        <p>Your pantry inventory, weekly meal planner, shopping lists, dietary preferences, and saved recipes are primarily stored locally on your device (using local browser storage / IndexedDB). We do not sell this data or use it for third-party advertising.</p>
+
+        <h3>1.3 Data Processed via Third-Party Services</h3>
+        <ul>
+          <li><strong>Authentication & Cloud Credits (Supabase):</strong> When you sign in with Google, we process your User ID, email address, and display name via <strong>Supabase</strong> (Supabase Inc.) solely to authenticate your account and securely manage your AI recipe & receipt scan credit balance.</li>
+          <li><strong>AI Recipe Generation & Receipt Scanning (Google Gemini API):</strong> When you generate a recipe or scan a grocery receipt, your ingredient list, preferences, or receipt photo are transmitted securely via our backend proxy to the <strong>Google Gemini API</strong> (Google LLC) to generate recipes, food images, or extract grocery items. Receipt photos are processed transiently and are not stored permanently on our servers or used for advertising profiles.</li>
+          <li><strong>In-App Purchases (Google Play Billing & RevenueCat):</strong> Optional credit packages are processed via <strong>Google Play</strong> and managed via <strong>RevenueCat</strong> (RevenueCat Inc.). We do not have access to your credit card or banking details; we only receive anonymized purchase confirmation tokens to credit your account.</li>
+        </ul>
+
+        <h3>1.4 Your Rights</h3>
+        <p>Under the EU General Data Protection Regulation (GDPR) and the Swiss Federal Act on Data Protection (FADP / revDSG), you have the right to request access, correction, export, or deletion of your personal data at any time. To exercise these rights, please contact us at <a class="link" href="mailto:pocketfridge.support@gmail.com">pocketfridge.support@gmail.com</a>.</p>
+
+        <h3>1.5 Children's Privacy</h3>
+        <p>Pocket Fridge AI is not directed to children under the age of 13. We do not knowingly collect personal data from children under 13.</p>
+      </section>
+
+      <section class="card" id="delete-account">
+        <h2>2. Account & Data Deletion</h2>
+        <p>You can permanently delete your Pocket Fridge AI account and all associated cloud data at any time.</p>
+
+        <div class="box-danger">
+          <strong>Option A – Instant Deletion directly in the App:</strong>
+          <ol style="margin-top:8px; margin-bottom:0;">
+            <li>Open the <strong>Pocket Fridge AI</strong> app.</li>
+            <li>Tap the <strong>Settings (gear icon)</strong> in the top-right corner.</li>
+            <li>Scroll to the bottom and tap <strong>"Permanently Delete Account & Cloud Data"</strong>.</li>
+            <li>Confirm the deletion prompt. Your account, email address, and credit balance are immediately removed from our database.</li>
+          </ol>
+        </div>
+
+        <p><strong>Option B – Deletion via Email:</strong> If you no longer have access to the app, send an email from the address linked to your account to <a class="link" href="mailto:pocketfridge.support@gmail.com">pocketfridge.support@gmail.com</a> with the subject <em>"Account Deletion Request – Pocket Fridge AI"</em>. We will delete your account and cloud data within 7 business days.</p>
+
+        <h3>What Data is Deleted vs. Retained?</h3>
+        <ul>
+          <li><strong>Deleted immediately:</strong> Your Supabase user account, linked email address, display name, and remaining AI credit balance. Local pantry/recipe data is cleared on the device.</li>
+          <li><strong>Retained by third parties (legal requirement):</strong> Google Play retains payment transaction records as required by statutory tax and accounting laws.</li>
+        </ul>
+      </section>
+
+      <section class="card" id="terms">
+        <h2>3. Terms & Conditions & Health Disclaimer</h2>
+
+        <div class="box-warn">
+          <strong>Important Health & Allergen Disclaimer:</strong> Recipes in Pocket Fridge AI are generated by artificial intelligence (AI). The app does <strong>not</strong> replace professional nutritional advice or medical guidance. You are solely responsible for checking all ingredients before consumption for freshness, expiration dates, spoilage/mold, proper cooking temperatures, and personal allergies or intolerances.
+        </div>
+
+        <h3>3.1 Scope & "As-Is" Provision</h3>
+        <p>By using Pocket Fridge AI, you agree to these terms. The app is provided on an "as is" and "as available" basis without warranties regarding uninterrupted availability or specific culinary results.</p>
+
+        <h3>3.2 In-App Purchases (Consumable Credit Packages)</h3>
+        <p>Optional packages provide consumable credits for AI-generated food images, permanent recipe saving, and receipt scans. Payments and refunds are handled exclusively according to Google Play Store policies.</p>
+
+        <h3>3.3 Limitation of Liability</h3>
+        <p>To the maximum extent permitted by applicable law, the operator shall not be liable for any direct, indirect, incidental, or consequential damages resulting from the use of the app or AI-generated recipes.</p>
+      </section>
+    </div>
+
+    <!-- ==================== DEUTSCHE VERSION ==================== -->
+    <div id="content-de" class="hidden">
+      <section class="card" id="privacy-de">
+        <h2>1. Datenschutzerklärung (DSGVO & Schweizer revDSG)</h2>
+        <p>Diese Datenschutzerklärung informiert dich darüber, wie <strong>Pocket Fridge AI</strong> (Android-Paketname: <code>com.pocketfridge.ai</code>) personenbezogene Daten verarbeitet und schützt.</p>
+
+        <h3>1.1 Verantwortlicher & Kontakt</h3>
+        <p>
+          <strong>Betreiber:</strong> Mladen Jakovljevic<br>
+          <strong>Ort:</strong> Luzern, Schweiz<br>
+          <strong>Support- & Datenschutz-E-Mail:</strong> <a class="link" href="mailto:pocketfridge.support@gmail.com">pocketfridge.support@gmail.com</a>
+        </p>
+
+        <h3>1.2 Lokale Speicherung auf deinem Gerät</h3>
+        <p>Deine Kühlschrank-Vorräte, Wochenpläne, Einkaufslisten, Ernährungspräferenzen und gespeicherten Rezepte werden primär lokal auf deinem Endgerät (LocalStorage / IndexedDB) gespeichert. Diese Daten werden nicht verkauft und nicht für Werbeprofile verwendet.</p>
+
+        <h3>1.3 Verarbeitung durch Drittanbieter</h3>
+        <ul>
+          <li><strong>Anmeldung & KI-Guthaben (Supabase):</strong> Bei der Anmeldung über Google verarbeiten wir deine Nutzer-ID, E-Mail-Adresse und deinen Namen über <strong>Supabase</strong> (Supabase Inc.), ausschließlich zur Kontoverwaltung und sicheren Speicherung deines KI-Guthabens.</li>
+          <li><strong>KI-Rezepte & Kassenbon-Scanner (Google Gemini API):</strong> Wenn du Rezepte generierst oder einen Kassenbon scannst, werden die Zutatenliste, Präferenzen bzw. das Kassenbon-Foto sicher über unseren Server-Proxy an die <strong>Google Gemini API</strong> (Google LLC) übermittelt. Kassenbon-Fotos werden nur flüchtig zur Erkennung verarbeitet und nicht dauerhaft auf unseren Servern oder für Werbezwecke gespeichert.</li>
+          <li><strong>In-App-Käufe (Google Play Billing & RevenueCat):</strong> Optionale Guthaben-Pakete werden über <strong>Google Play</strong> abgewickelt und über <strong>RevenueCat</strong> (RevenueCat Inc.) verwaltet. Wir erhalten keinen Zugriff auf deine Kreditkarten- oder Bankdaten, sondern lediglich eine Kaufbestätigung zur Gutschrift deiner Pakete.</li>
+        </ul>
+
+        <h3>1.4 Deine Rechte</h3>
+        <p>Gemäss EU-DSGVO und Schweizer revDSG hast du jederzeit das Recht auf Auskunft, Berichtigung, Datenübertragbarkeit und Löschung deiner gespeicherten Daten. Kontaktiere uns hierfür unter <a class="link" href="mailto:pocketfridge.support@gmail.com">pocketfridge.support@gmail.com</a>.</p>
+      </section>
+
+      <section class="card" id="delete-account-de">
+        <h2>2. Konto & Daten dauerhaft löschen</h2>
+        <p>Du kannst dein Pocket-Fridge-AI-Konto und alle zugehörigen Cloud-Daten jederzeit vollständig löschen.</p>
+
+        <div class="box-danger">
+          <strong>Option A – Sofortige Löschung direkt in der App:</strong>
+          <ol style="margin-top:8px; margin-bottom:0;">
+            <li>Öffne die App <strong>Pocket Fridge AI</strong>.</li>
+            <li>Tippe oben rechts auf das <strong>Zahnrad-Symbol (Einstellungen)</strong>.</li>
+            <li>Scrolle ganz nach unten und tippe auf <strong>„Konto & Datenbank-Daten dauerhaft löschen“</strong>.</li>
+            <li>Bestätige die Sicherheitsabfrage. Dein Konto, deine E-Mail-Adresse und dein Guthaben werden sofort unwiderruflich aus unserer Datenbank gelöscht.</li>
+          </ol>
+        </div>
+
+        <p><strong>Option B – Löschung per E-Mail:</strong> Falls du keinen Zugriff mehr auf die App hast, sende uns eine E-Mail von deiner registrierten Adresse an <a class="link" href="mailto:pocketfridge.support@gmail.com">pocketfridge.support@gmail.com</a> mit dem Betreff <em>„Kontolöschung – Pocket Fridge AI“</em>. Wir löschen dein Konto innerhalb von 7 Werktagen.</p>
+
+        <h3>Welche Daten werden gelöscht bzw. aufbewahrt?</h3>
+        <ul>
+          <li><strong>Sofort gelöscht:</strong> Dein Supabase-Benutzerkonto, deine E-Mail-Adresse, dein Anzeigename sowie dein verbleibendes KI-Guthaben. Lokale App-Daten werden auf dem Gerät zurückgesetzt.</li>
+          <li><strong>Gesetzliche Aufbewahrung bei Dritten:</strong> Zahlungsbelege zu In-App-Käufen verbleiben gemäss gesetzlicher Steuer- und Buchhaltungspflichten bei Google Play.</li>
+        </ul>
+      </section>
+
+      <section class="card" id="terms-de">
+        <h2>3. Allgemeine Geschäftsbedingungen (AGB) & Gesundheitshinweis</h2>
+
+        <div class="box-warn">
+          <strong>Wichtiger Gesundheits- & Allergen-Disclaimer:</strong> Rezepte in Pocket Fridge AI werden durch Künstliche Intelligenz (KI) erstellt. Die App ersetzt <strong>keine</strong> medizinische Beratung oder Ernährungsberatung. Der Nutzer ist allein dafür verantwortlich, Lebensmittel vor dem Verzehr auf Frische, Mindesthaltbarkeitsdatum, Schimmelbildung, ausreichendes Durchgaren sowie persönliche Allergien und Unverträglichkeiten zu prüfen.
+        </div>
+
+        <h3>3.1 Bereitstellung „As-Is“</h3>
+        <p>Mit der Nutzung von Pocket Fridge AI stimmst du diesen Bedingungen zu. Die App wird „wie besehen“ und „nach Verfügbarkeit“ bereitgestellt.</p>
+
+        <h3>3.2 In-App-Käufe (Verbrauchbare Guthaben-Pakete)</h3>
+        <p>Optionale Pakete schalten Guthaben für KI-Food-Fotos, dauerhaftes Speichern von Rezepten und Kassenbon-Scans frei. Zahlung und Rückerstattungen richten sich ausschliesslich nach den Richtlinien des Google Play Stores.</p>
+
+        <h3>3.3 Haftungsbegrenzung</h3>
+        <p>Soweit gesetzlich zulässig, ist die Haftung des Betreibers für direkte, indirekte oder beiläufig entstandene Schäden aus der Nutzung der App oder KI-generierter Rezepte ausgeschlossen.</p>
+      </section>
+    </div>
+
+    <footer>
+      &copy; 2026 Pocket Fridge AI • Mladen Jakovljevic • <a class="link" href="mailto:pocketfridge.support@gmail.com">pocketfridge.support@gmail.com</a>
+    </footer>
+  </div>
+
+  <script>
+    function setLang(lang) {
+      document.getElementById('content-en').classList.toggle('hidden', lang !== 'en');
+      document.getElementById('content-de').classList.toggle('hidden', lang !== 'de');
+      document.getElementById('nav-en').classList.toggle('hidden', lang !== 'en');
+      document.getElementById('nav-de').classList.toggle('hidden', lang !== 'de');
+      document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+      document.getElementById('btn-de').classList.toggle('active', lang === 'de');
+      document.documentElement.lang = lang;
+      document.getElementById('header-sub').textContent = lang === 'de'
+        ? 'Datenschutzerklärung, AGB & Kontolöschung • Stand: November 2026'
+        : 'Legal Information, Privacy Policy, Terms & Account Deletion • Last updated: November 2026';
+    }
+  </script>
+</body>
+</html>
